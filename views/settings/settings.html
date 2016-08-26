@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Settings</title>
+    <link href="../../node_modules/materialize-css/dist/css/materialize.min.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../style.css">
+	</head>
+<body class="no-drag">
+  <div class="container">
+      <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#application-settings">Application</a></li>
+          <li class="tab col s3"><a href="#github-settings">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div id="github-settings" class="col s12">
+        <div class="row">
+          <div class="input-field col s2">
+            <input id="githubProtocol" type="text" class="validate">
+            <label for="githubProtocol">Protocol</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input id="githubBaseUrl" type="text" class="validate">
+            <label for="githubBaseUrl">GitHub Base URL</label>
+          </div>
+
+          <div class="input-field col s4">
+            <input id="githubApiPath" type="text" placeholder="/api/v3 for GHE" class="validate">
+            <label for="githubApiPath">GitHub API Path</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4">
+            <input id="githubUser" type="text" class="required validate">
+            <label for="githubUser">GitHub User</label>
+          </div>
+          <div class="input-field col s8">
+            <input id="githubToken" type="text" class="required validate">
+            <label for="githubToken">GitHub Token</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s10">
+            <i class="material-icons prefix">code</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Repositories</label>
+          </div>
+          <div class="col s1">
+            <a id="addRepository" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="col s1">
+            <a id="refreshRepositories" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">refresh</i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class"col s12">
+            <ul id="added-repositories" class="collection with-header">
+              <li class="collection-header"><h5>Current Repositories</h5></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="application-settings" class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="proxyHost" type="text" class="validate">
+            <label for="proxyHost">Proxy Host</label>
+          </div>
+
+          <div class="input-field col s3">
+            <input id="proxyPort" type="text" class="validate">
+            <label for="proxyPort">Proxy Port</label>
+          </div>
+
+          <div class="input-field col s3">
+            <div class="switch">
+              <label>
+                Off
+                <input id="proxyEnabled" type="checkbox">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s10">
+            <input id="pluginIndexUrl" type="text" class="required validate">
+            <label for="pluginIndexUrl">Mutuca Plugin Registry</label>
+          </div>
+
+          <div class="input-field col s2">
+            <input id="updateFrequency" type="number" min="1" class="required validate">
+            <label for="updateFrequency">Refresh (minutes)</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row col s12">
+      <button class="btn waves-effect waves-light" type="submit" id="cancel">Cancel
+        <i class="material-icons right">cancel</i>
+      </button>
+
+      <button class="btn waves-effect waves-light" type="submit" id="save">Save
+        <i class="material-icons right">save</i>
+      </button>
+    </div>
+  </div>
+
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/hammerjs/hammer.min.js"></script>
+  <script src="../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="../navbar.js"></script>
+  <script src="./settings.js"></script>
+</body>
+</html>

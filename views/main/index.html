@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>mutuca</title>
+    <link href="../../node_modules/materialize-css/dist/css/materialize.min.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../style.css">
+	</head>
+<body class="drag grey darken-1">
+  <div id="navbar"></div>
+
+	<div id="plugin-container" class="container">
+    <div class="row">
+    </div>
+	</div>
+
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/hammerjs/hammer.min.js"></script>
+  <script src="../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="../navbar.js"></script>
+  <script src="./plugins.js"></script>
+  <script>
+    $(document).ready(() => {
+      Materialize.toast('Lock and loaded!', 2000);
+    });
+  </script>
+</body>
+</html>

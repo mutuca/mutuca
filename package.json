@@ -1,0 +1,47 @@
+{
+  "name": "mutuca",
+  "version": "1.0.0",
+  "description": "The Definitive Developer's Dashboard",
+  "author": "Leonardo Eloy",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardoeloy/mutuca.git"
+  },
+  "keywords": [
+    "mutuca",
+    "developer",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonardoeloy/mutuca/issues"
+  },
+  "homepage": "https://github.com/leonardoeloy/mutuca#readme",
+  "dependencies": {
+    "electron-debug": "^1.0.0"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^1.2.0",
+    "electron-config": "^0.2.1",
+    "xo": "^0.16.0",
+    "materialize-css": "^0.97.7",
+    "jquery": "^2.2.0",
+    "npmi": "^2.0.0",
+    "github": "^2.5.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
